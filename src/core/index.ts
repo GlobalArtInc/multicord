@@ -1,1 +1,1 @@
-export { SdcClient } from './client';
+export { SdcClient, TopGgClient } from './client';

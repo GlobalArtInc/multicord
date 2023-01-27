@@ -26,7 +26,7 @@ export class SdcBots {
 
   public async autoPost(client: Client) {
     this.sendStats(client);
-    setInterval(() => this.sendStats(client), 900000);
+    setInterval(() => this.sendStats(client), 900 * 1000);
   }
 
   public async stats(botId: string, data: Partial<SdcStats>) {
