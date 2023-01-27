@@ -30,6 +30,11 @@ export class SdcBots {
   }
 
   public async stats(botId: string, data: Partial<SdcStats>) {
+    data = Object.assign({
+      servers: 0,
+      shards: 1,
+    }, data);
+
     return this.api.send('post', `bots/${botId}/stats`, data, {
       headers: {
         Authorization: `SDC ${this.token}`,

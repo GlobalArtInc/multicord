@@ -25,7 +25,7 @@ export class SdcApi {
 
     return new Promise<R>((resolve, reject) => axios(reqConfig)
       .then((res) => resolve(res.data))
-      .catch((err) => reject(err.data)));
+      .catch((err) => reject(err)));
   }
 
 }
