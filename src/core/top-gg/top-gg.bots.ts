@@ -5,7 +5,7 @@ export class TopGgBots {
   constructor(private token: string) {} 
   private api = new TopGgApi();
 
-  async search(searchData: TopGgSearchBotRequest) {
+  public async search(searchData: TopGgSearchBotRequest) {
     return this.api.send('get', 'bots', searchData, {
       headers: {
         Authorization: this.token,
@@ -13,7 +13,7 @@ export class TopGgBots {
     });
   }
 
-  async find(botId: string) {
+  public async find(botId: string) {
     return this.api.send('get', `bots/${botId}`, {}, {
       headers: {
         Authorization: this.token,
@@ -21,7 +21,7 @@ export class TopGgBots {
     });
   }
 
-  async stats(botId: string) {
+  public async stats(botId: string) {
     return this.api.send('get', `bots/${botId}/stats`, {}, {
       headers: {
         Authorization: this.token,
@@ -29,7 +29,7 @@ export class TopGgBots {
     });
   }
 
-  async postStats(botId: string, postData: TopGgPostStatBody) {
+  public async postStats(botId: string, postData: TopGgPostStatBody) {
     return this.api.send('post', `bots/${botId}/stats`, postData, {
       headers: {
         Authorization: this.token,
