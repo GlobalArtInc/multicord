@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.13.0",
-    "discord.js": "^14.24.0",
+    "discord.js": "^14.24.1",
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
